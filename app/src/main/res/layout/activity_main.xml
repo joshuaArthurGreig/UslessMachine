@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/button_main_uselessSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/widget_main_rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_main_busy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOOK BUSY"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_destruct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/widget_main_rating" />
+
+    <RatingBar
+        android:id="@+id/widget_main_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_busy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_uselessSwitch" />
+
+    <Button
+        android:id="@+id/button_main_destruct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELF-DESTRUCT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_busy" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_main_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="339dp"
+        android:layout_height="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_busy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/widget_main_rating" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_main_mainUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="button_main_uselessSwitch,button_main_busy,button_main_destruct,widget_main_rating" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
